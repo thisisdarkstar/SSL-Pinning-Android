@@ -8,13 +8,14 @@
 
 ### Steps to Disable SSL Pinning 
 
-1. **Download frida-server according your architecture**
+1. **Download frida-server according your architecture**\
 [Frida-server](https://github.com/frida/frida/releases/tag/16.6.6)
 
 ![frida-tools](screenshots/Screenshot%202025-02-15%20001145.png)
+
 ![frida-tools](screenshots/Screenshot%202025-02-15%20001154.png)
 
-- Check for architecture using `adb` it's `x86`
+- Check for architecture using `adb` it's `x86`\
 ![checking architecture](screenshots/Screenshot%202025-02-15%20001604.png)
 
 1. **Give it proper permission and push to the emulator**
@@ -64,8 +65,17 @@ adb shell pm grant com.kinandcarta.create.proxytoggle android.permission.WRITE_S
 ![](screenshots/Screenshot%202025-02-15%20004637.png)
 
 - setup burpsuite proxy listner and install the certificate
+
+**choose all interfaces**
+
 ![](screenshots/Screenshot%202025-02-15%20004845.png)
+
+**import the certificate**
+
 ![](screenshots/Screenshot%202025-02-15%20004913.png)
+
+**name it accordingly eg. `cert.der` and import**
+
 ![](screenshots/Screenshot%202025-02-15%20004943.png)
 
 - Push the certificate to emulator 
@@ -94,6 +104,7 @@ adb install ~/vapt_projects/TruCollect/UAT-9th-SepRelease\ \(1\).apk
 **Run objection with the package**
 - **make sure frida-server is running**
 - **`frida-ps -U` check connection and copy the package name**
+- use the following command to enter objection console with selected package for exploration
 ```bash
 objection -g "TruCollect" explore
 ```
