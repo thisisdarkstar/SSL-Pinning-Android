@@ -108,4 +108,4 @@ android sslpinning disable
 
 ### TEST The proxy now 
 **Got the traffic**
-![](screenshots/Screenshot%202025-02-15%20010721.png)# SSL-Pinning-Android
+![](screenshots/Screenshot%202025-02-15%20010721.png)
